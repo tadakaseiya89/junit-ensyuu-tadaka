@@ -2,17 +2,17 @@ package junit.tutorial.ex01.e02;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 class CalculatorTest {
 
-	private static final Calculator calc = new Calculator();
-
+	@DisplayName("数字テスト")
 	@Test
 	void test() {
-		int result1 = calc.divide(3, 0);
-		assertEquals(calc.divide(result1, result1), result1, "例外");
-		System.out.println(result1);
-	}
-
+		Calculator calc = new Calculator();
+		Throwable exception = assertThrows(IllegalArgumentException.class, () -> calc.divide(3, 0));
+		assertEquals(exception.getMessage(), "divide by zero.");
+	};
+	
 }

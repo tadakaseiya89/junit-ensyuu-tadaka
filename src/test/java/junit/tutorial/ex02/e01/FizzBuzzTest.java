@@ -2,6 +2,7 @@ package junit.tutorial.ex02.e01;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.Arrays;
 import java.util.List;
 
 import org.junit.jupiter.api.DisplayName;
@@ -12,10 +13,12 @@ class FizzBuzzTest {
 	@Test
 	void test() {
 		FizzBuzz fizzBuzz = new FizzBuzz();
-		List<String> result = fizzBuzz.createFizzBuzzList(16);
-		assertEquals(fizzBuzz.createFizzBuzzList(16), result,
-				"1,2,Fizz,4,Buzz,Fizz,7,8,Fizz,Buzz,11,Fizz,13,14,FizzBuzz,16になる");
-System.out.println(result);
+		List<String> result1 = Arrays.asList("1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11",
+				"Fizz", "13", "14", "FizzBuzz", "16");
+		List<String> result2 = fizzBuzz.createFizzBuzzList(16);
+
+		assertEquals(result1, result2, "1,2,Fizz,4,Buzz,Fizz,7,8,Fizz,Buzz,11,Fizz,13,14,FizzBuzz,16になる");
+
 	}
 
 }

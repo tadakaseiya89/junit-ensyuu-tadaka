@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 class CalculatorTest {
 
-	@DisplayName("例外処理テスト")
+	@DisplayName("第２引数に０を指定してdivideを呼び出すと、IllegalArgumentExceptionが発生する")
 	@Test
 	void test() {
 		Calculator calc = new Calculator();

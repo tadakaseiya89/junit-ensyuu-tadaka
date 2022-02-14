@@ -6,7 +6,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 class CounterTest {
-	@DisplayName("１回表示テスト")
+	@DisplayName("初期状態で、incrementメソッドを実行すると１が取得できる")
 	@Test
 	void test1() {
 		Counter counter = new Counter();
@@ -14,7 +14,7 @@ class CounterTest {
 		assertEquals(1, result1, "１と表示されます");
 	}
 
-	@DisplayName("2回表示テスト")
+	@DisplayName("incrementメソッドを１回実行した状態で、incrementメソッドを実行すると２が取得できる")
 	@Test
 	void test2() {
 		Counter counter = new Counter();
@@ -23,7 +23,7 @@ class CounterTest {
 		assertEquals(2, result2, "2と表示されます");
 	}
 
-	@DisplayName("51回表示テスト")
+	@DisplayName("incrementメソッドを50回実行した状態で、incrementメソッドを実行すると５１が取得できる")
 	@Test
 	void test3() {
 		Counter counter = new Counter();

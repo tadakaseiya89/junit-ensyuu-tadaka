@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class ItemStock {
 	private Map<String, Integer> itemMap = new HashMap<>();
-	
+
 	public int getNum(Item item) {
 		Integer num = itemMap.get(item.getName());
 		if (num == null) {
@@ -14,7 +14,7 @@ public class ItemStock {
 			return num;
 		}
 	}
-	
+
 	public void add(Item item) {
 		Integer num = itemMap.get(item.getName());
 		if (num == null) {

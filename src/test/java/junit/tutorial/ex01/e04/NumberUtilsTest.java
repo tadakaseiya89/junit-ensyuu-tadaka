@@ -6,14 +6,14 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 class NumberUtilsTest {
-	@DisplayName("trueテスト")
+	@DisplayName("入力値に「１０」を与えると、trueを返す")
 	@Test
 	void test1() {
 		boolean result1 = NumberUtils.isEven(10);
 		assertEquals(true, result1, "trueです");
 	}
 
-	@DisplayName("falseテスト")
+	@DisplayName("入力値に「７」を与えると、falseを返す")
 	@Test
 	void test2() {
 		boolean result2 = NumberUtils.isEven(7);
